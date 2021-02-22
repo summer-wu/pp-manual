@@ -8,7 +8,6 @@ Markdown==3.3.3
 MarkupSafe==1.1.1
 mkdocs==1.1.2
 nltk==3.5
-pkg-resources==0.0.0
 PyYAML==5.4.1
 regex==2020.11.13
 six==1.15.0
