@@ -1,17 +1,3 @@
-# Welcome to MkDocs
-
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+# 前言
++ 《Power Platform 使用手册》关注如何使用，包括创建entity、创建apps。通过鼠标操作可以实现的功能都在本手册内。
++ 《Power Platform 开发手册》关注如何用代码扩展已有功能，包括用sql查询数据，用C#查询数据，创建code component
