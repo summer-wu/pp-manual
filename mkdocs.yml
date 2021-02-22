@@ -5,3 +5,5 @@ theme:
   hljs_languages:
     - json
     - C#
+extra_css:
+  - css/extra.css

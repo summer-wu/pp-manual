@@ -8,5 +8,5 @@
 # 安装mkdocs及依赖
 + 要求python3.8
 + requirements.txt中记录了pip的依赖内容
-+ 用`pip freeze >  requirements.txt`生成requirements.txt
++ 用`pip freeze >  requirements.txt`生成requirements.txt，然后删除`pkg-resources==0.0.0`(ubuntu中才有这行)
 + 用`pip install -r requirements.txt`恢复requirements.txt
