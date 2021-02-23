@@ -20,10 +20,12 @@
 
 ## 创建apps
 + app有两种类型：canvas和model-driven。创建的方式各不相同。
-+ canvas app 中的数据来自于connectors，其中有`CDS connector`，也有`Google Drive Connector`，共一百多个connector。
-+ model-driven app 中的数据仅来自CDS
++ canvas app 中的数据来自于connectors，其中有`CDS connector`，也有`Google Drive Connector`，共一百多个connector。canvas app的界面需要用`Power Apps Studio`开发，拖拽配置。
++ model-driven app 中的数据仅来自CDS。界面是固定的，只可以配置左侧导航条。
 + 具体创建步骤参考官方文档，此处略过。
-
++ ===
++ Power Apps Studio截图：
++ ![](imgs/40-Power-Apps-Studio.jpg)
 
 ## 切换环境
 + 一个tenant中有多个environment。environment是一个容器，其中包括一个dataverse instance、n个apps、n个automate flows。
