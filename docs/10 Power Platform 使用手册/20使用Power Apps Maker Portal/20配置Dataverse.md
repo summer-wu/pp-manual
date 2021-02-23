@@ -1,4 +1,4 @@
-# 管理Dataverse
+# 配置Dataverse
 + Dataverse就是一个关系型数据库+Web管理界面。和所有的关系型数据库一样，需要定义table、relation（也叫外键或foreign key或reference key）、view、stored procedure。
 + 在mysql中，stored procedure是一个函数，需要用SQL调用。在Dataverse中，stored procedure是以Business rules的形式提供的。
 
@@ -15,7 +15,7 @@
 + ![](imgs/42-access-levels-privileges.jpg)
 + ![](imgs/42-access-levels-privileges-2.jpg)
 
-## 管理columns
+## 配置columns
 + columns之前叫fields，有些文档中也称作attribute、property
 + 新建column时需要选`Data type`，大部分都很容易理解，这里只描述几个不容易理解的type：Lookup类型、Owner类型、Customer类型、PartyList类型。
 + Lookup类型的字段。类似于单选，但单选是从“固定的列表”中选择一个，Lookup是从”特定的表“中选择一个。比如一个网购订单，订单的”卖家字段“就是Lookup字段。在数据库中存储的的是一个整数GUID。
@@ -30,3 +30,17 @@
 + PartyList字段可以从6个table中选择记录：
 + ![](imgs/45-Appointment.png)
 
+## 配置relationship
++ 参考附录2
+
+## 配置business rules
++ 注意和`BPF（Business Process Flow）`区分！
++ BPF是在Web界面上的创建向导，一步步**引导用户**先输入什么、再输入什么、最后完成创建直接保存。编辑时不使用BPF。
++ business rule用于**提高数据质量**，不合格的数据直接拦在外面，不写入db。business rule需要定义condition，以及condition满足后执行的哪些actions。
++ 编辑business rule的时候，注意右上角的scope，scope有3个选项：Entity、All Forms、Specific Forms。
++ Specific Forms不是一个选项，而是多个选项，有多少个main form，就有多少个选项。刚创建时，只有一个`Information Form`。
++ 如果Scope为 a specific Form，则**仅这个main form**中会触发此business rule。canvas app中不会触发此business rule。
++ 如果Scope为All Forms，则**所有main form**中都会触发此business rule。canvas app中不会触发此business rule。
++ 如果Scope为Entity，则**所有main form**中都会触发此business rule，所有保存操作都**会在server端触发**，包括:canvas app中保存时，API创建的记录、导入的记录。
++ 在server端触发时，不支持这三个actions：Set Visibility; Lock/Unlock; Recommendation。Model-Driven中支持所有的action。
++ ![](imgs/46-business-rule-designer.jpg)

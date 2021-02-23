@@ -1,4 +1,4 @@
-# 更改windows10和Chrome的显示语言
+# 附录3 更改windows10和Chrome的显示语言
 
 ## 为什么要更改显示语言？
 + 为了看english的output。因为windows中很多cli程序都内置了多语言，默认显示的是中文帮助，但中文翻译似乎都是机器翻译的，根本看不懂，更改为显示语言后就可以看到english output了。
