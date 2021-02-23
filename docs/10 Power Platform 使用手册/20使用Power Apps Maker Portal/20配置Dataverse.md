@@ -97,13 +97,18 @@
 + classic form designer:
 + ![](imgs/52legacy-main-form-designer.jpg)
 
-### main form
+### 配置main form
 + main form从上到下分为三个部分：header body footer。
 + body中可以添加n个tabs，tab中可以添加n个sections。sections可以分为多列。一般只有一个tab。
 + 开发者的工作就是向form中添加form field。form field有label，label可以隐藏，form field可以设置为readonly的，左侧会多一把锁头![](imgs/70-readonly-field.jpg)。
 + field有data type，Form Designer会根据data type自动选择control
 + 使用business rule可以动态隐藏field
 
+### 设置 form 权限、fallback form
++ security role 不仅可以控制用户对entity的访问，还可以控制用户对form的访问。
++ 在Form Setting处，可以设置仅某几个security roles可以看到这个Form。如果做了这个限制，就会出现一种情况，有个用户可以访问entity，但不能访问form。
++ 为了避免出现这种情况，必须设置一个fallback form，当根据security roles找不到form时，使用这个fallback form进行显示。
++ ![](imgs/71-fallback-forms.jpg)
 
 ## 配置dashboard
 + dashboard是仪表盘，就是 **分类**汇总 呈现出来，页面中有chart、list。
