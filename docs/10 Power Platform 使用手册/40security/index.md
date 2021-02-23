@@ -1,9 +1,12 @@
 # security权限管理
 + CDS中使用的权限管理是 RBAC（Role-Based Access Control）方式。默认用户没有任何权限，必须明确分配一个security role后，用户才可以访问CDS中的数据。 
 + 可以访问environment，并不表示可以访问data！
-+ environment创建后(未安装database前)，自带了两个roles：`System Administrator`和`Environment Maker`
-+ 安装database后，会添加额外的几个role，重要的只有这两个：`System Customizer`和`Common Data Service User`（`Common Data Service User`在文档中又叫做`Basic User`、`Dataverse User`）。
++ environment创建后(未安装database前)，自带了两个roles：`System Administrator`和`Environment Maker`，截图如下：
++ ![](imgs/40-before-database.png)
++ 安装database后，会添加额外的几个role（截图如下），重要的只有这两个：`System Customizer`和`Common Data Service User`（`Common Data Service User`在文档中又叫做`Basic User`、`Dataverse User`）
++ ![](imgs/41-after-database.png)
 + security role是颗粒度最小的单位，一个user可以有多个security roles。
+
 
 ## 四个最重要的security roles
 + `System Administrator`有所有权限;
