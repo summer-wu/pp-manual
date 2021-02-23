@@ -3,3 +3,7 @@ blockquote {
     color: #6a737d;
     border-left: 6px solid #dfe2e5;
 }
+
+table{
+    margin-bottom:15px;
+}
