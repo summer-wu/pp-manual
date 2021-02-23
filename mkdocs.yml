@@ -1,7 +1,10 @@
 site_name: Power Platform 使用手册、Power Platform 开发手册
+repo_url: https://github.com/summer-wu/pp-manual
+titles_only: true
 theme:
-  name: readthedocs
+  name: material
   highlightjs: true
+  collapse_navigation: false
   hljs_languages:
     - json
     - C#
