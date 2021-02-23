@@ -1,4 +1,4 @@
-# PPac的功能
+# morden PPac的功能
 + morden PPac中可以管理environment（包括新建、删除、备份、管理可访问用户、开关某个feature），查看capacity，设置Data policies。morden PPac很多功能会跳转到legacy PPac，比如添加user和添加security roles都会打开legacy PPac中的对应页面。
 + legacy PPac可以管理当前environment中的features、管理dataverse、管理users、分配security roles。
 

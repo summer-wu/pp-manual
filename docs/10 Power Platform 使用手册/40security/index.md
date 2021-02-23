@@ -26,3 +26,6 @@
 + 如果`access level = Parent:Child Business Units`，可以将owner改为 与自己相同BU的其他用户，或 比自己BU低的用户
 + 如果`access level = Organization`，可以将owner改为任意用户
 > 官方文档中没有详细解释 Create Privilege 的作用，以上总结是我在论坛提问得到的答复，见`https://powerusers.microsoft.com/t5/Microsoft-Dataverse/A-Design-Flaw-in-Security-Role-Create-Privilege-should-only-has/m-p/819481#M9405`
+
+## 分配security role
++ 
