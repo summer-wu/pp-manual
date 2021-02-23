@@ -1,11 +1,17 @@
 # 配置Dataverse
-+ Dataverse就是一个关系型数据库+Web管理界面。和所有的关系型数据库一样，需要定义table、relation（也叫外键或foreign key或reference key）、view、stored procedure。
-+ 在mysql中，stored procedure是一个函数，需要用SQL调用。在Dataverse中，stored procedure是以Business rules的形式提供的。
++ Dataverse就是一个关系型数据库+Web管理界面。Dataverse和所有的关系型数据库一样，需要定义table、relationship（也叫外键或foreign key或reference key）、view。
++ Dataverse还提供了更丰富的功能，包括创建Chart、导入导出数据。
+
+## 标准表
++ 新建环境后，是没有database的，这时只能创建canvas app。管理员可以安装database。
++ database时，自带了一些表，比如Account、Contact、User，这些叫standard tables。标准表不可以删除只可以隐藏。
++ 隐藏标准表的方式：就是让所有人都看不到这个表，需要修改所有security roles，将Read权限改为None，但在 Maker Portal 仍然可以看到这个表。
+
 
 ## 新建table（entity）
 + table之前叫entity
 + table type有两种：Standard table和Activity table。
-+ Activity table 的 ownership 只能是`User or team`，比如给员工分配的任务、比如预约的会议，都可以作为Activity类型。Activity可以显示在timeline上。
++ Activity table 的 ownership 只能是`User or team`，比如给员工分配的任务、比如预约的会议，都可以作为Activity类型。Activity可以显示在timeline上。示例Activity表：Appointment Email Fax Letter PhoneCall RecurringAppointmentMaster。
 + Standard table的 ownership 有2个选项：`User or team`和`Organization`。
 + 两种ownership的区别：ownership会影响`Security Role`中可选的access level和privileges。如果选择`User or team`，则access level有5种(`None Selected;Users;Business Unit; Parent:Child Business Units;Organization`)，privilege有8种；如果选择`Organization`，则access level只有2种(`None Selected;Organization`)，privilege有6种（缺少了Assign和Share）。
 + ===
@@ -29,6 +35,24 @@
 + ![](imgs/44-Owner-DataType-Can-Choose-from-2-tables.png)
 + PartyList字段可以从6个table中选择记录：
 + ![](imgs/45-Appointment.png)
+
+### calculated field 与 rollup field
++ `rollup field` 会写入db，需要system job定时执行，第一次配置后需要等待一段时间（12小时执行一次）。可以跨多个entity，比如可以记录一个公司有多少个员工。可以使用aggregate function（如COUNT SUM）
++ `rollup field` 的 字段类型 只能是 number。不可以是 文本、单选 类型。
++ `calculated field` 不写入到db，它是**读取数据时用sql语句计算出来**的。
++ `calculated field`只能是 文本、number 类型。不可以是Lookup、单选、多选、图片。
++ 字段的Data Type和Field Type创建后是不可以修改，如果错了只能删掉:
++ ![](imgs/71-field-type-cannot-change.png)
+
+### calculated field
++ form不会对`calculated field`做特殊处理，修改form中的其他字段，`calculated field`不会动态修改，点击保存后`calculated field`的值才会变化。
++ calculated field**不需要定时任务**。它是只读的，这个字段并不会写入到db中，而是每次**读取时用sql语句计算出来**的。
++ 使用场景： 有first name、last name，自动获得full name。有一个datetime字段，自动获取date。
++ calculated field在form中有一把锁头，表示readonly：
++ ![](imgs/73-calculated-readonly.png)
++ calculated field designer截图：
++ ![](imgs/72-calculated-field.png)
+
 
 ## 配置relationship
 + 参考附录2
@@ -68,10 +92,18 @@
 + ![](imgs/55-Card.jpg)
 + ![](imgs/56-Card-Expanded.jpg)
 + 有两种designer，classic form designer功能更多；morden designer可以实时预览。
-+ morden view designer：
++ morden form designer：
 + ![](imgs/51main-form-designer.jpg)
 + classic form designer:
 + ![](imgs/52legacy-main-form-designer.jpg)
+
+### main form
++ main form从上到下分为三个部分：header body footer。
++ body中可以添加n个tabs，tab中可以添加n个sections。sections可以分为多列。一般只有一个tab。
++ 开发者的工作就是向form中添加form field。form field有label，label可以隐藏，form field可以设置为readonly的，左侧会多一把锁头![](imgs/70-readonly-field.jpg)。
++ field有data type，Form Designer会根据data type自动选择control
++ 使用business rule可以动态隐藏field
+
 
 ## 配置dashboard
 + dashboard是仪表盘，就是 **分类**汇总 呈现出来，页面中有chart、list。
