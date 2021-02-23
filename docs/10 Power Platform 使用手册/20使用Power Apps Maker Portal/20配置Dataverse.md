@@ -51,6 +51,10 @@
 + 不仅可以配置当前table中的列，还可以配置parent table中的列。比如在order列表中直接显示seller的地址。
 + 在Model-Driven app中可以切换view，如图:
 + ![](imgs/50-switch-views.jpg)
++ view按创建者分类，可以分为两种：system views、user views。见下图：
++ ![](imgs/64-user-view.jpg)
++ 用户创建的views是可以分享的，如图：
++ ![](imgs/65-share-user-view.jpg)
 
 ## 配置forms
 + form用于显示一条记录的详细内容
@@ -78,18 +82,39 @@
 + app designer截图：
 + ![](imgs/57-dashboard-2-type.jpg)
 + ![](imgs/58-dashboard-2-type-web.jpg)
++ app designer中新建dashboard的两种类型：
++ ![](imgs/61-create-dashboard-choose-layout.jpg)
 
 ### classic dashboard vs interactive dashboard
-+ 
++ classic dashboard仅支持单chart下钻，下钻一个chart其他chart不会联动。interactive dashboard 下钻时，多个chart是联动的。
+> 什么是下钻（drill down）？ 比如一个跨国连锁超市，初始以国家分组看销售额，点击国家后，可以以省份分组看销售额，点击省份后，可以以门店分组看销售额。这就叫下钻，逐渐细化。
++ classic dashboard 中只可以添加chart和view
++ interactive dashboard 中也有chart和view，但把chart叫做Visual Filters，把view叫做streams。visual filter下钻后会影响streams显示。
+> stream和view的区别：view中要想细化，需要手动输入 Advanced filters 参数；stream细化依靠点击visual filter中的分组 
 
 ### system dashboard vs user dashboard
-+ dashboard按创建者分，可以分为system dashboard、user dashboard。见下图：
++ dashboard按创建者分类，可以分为两种：system dashboards、user dashboards。见下图：
 + ![](imgs/59-create-user-dashboard.jpg) ![](imgs/60-user-dashboard.jpg)
 
 
+## 配置chart
++ chart就是**分组**统计。下图是拜访统计，先选择一个view（这是datasource），然后需要从datasource中抽出一组数字，这组数字叫做series，图中的series是`300 4 28 53`。
++ 每个series中的值，都需要有一个label（或叫category）来标记这个数字是什么意思。
+> 注意：label并不一定位于horizontal Axis（x轴），如果是Bar Chart，label位于vertical axis（y轴）。Designer中的用词不准确。
++ ![](imgs/62-create-chart.jpg)
 
 
+## 配置Alternate Key
++ Alternate Key实际是Alternate primary key，必须是Unique的。
++ alternate key可能创建失败，`Morden PPac`中看不到创建状态，在`legacy PPac`中可以看到创建状态。
 
+
+## 在Maker Portal中管理Data
++ 在Data标签处，显示的不是所有数据! **在右上角可以修改View**
++ ![](imgs/63-manage-data.jpg)
++ 在这里可以导入数据、导出数据，但没有Model-Driven中友好，建议**不要通过这个界面导入导出**，而是创建一个Model-Driven app，在 md app 中执行导入导出。
++ 这里可以显示 `All columns`，这是 md app 中没有的功能。
++ 在这里可以新建和删除，
 
 
 
