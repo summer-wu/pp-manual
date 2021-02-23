@@ -27,5 +27,10 @@
 + 如果`access level = Organization`，可以将owner改为任意用户
 > 官方文档中没有详细解释 Create Privilege 的作用，以上总结是我在论坛提问得到的答复，见`https://powerusers.microsoft.com/t5/Microsoft-Dataverse/A-Design-Flaw-in-Security-Role-Create-Privilege-should-only-has/m-p/819481#M9405`
 
-## 分配security role
-+ 
+## 分配security roles
++ 在 `morden PPac` 和 `legacy PPac` 中都可以分配 security roles。但`legacy PPac`中效率更高，这里以`legacy PPac`举例。
++ 在Settings-Security-Users,选中一个User，在顶部点击`Manage Roles`按钮
++ ![](imgs/20-legacy-ppac-security.jpg)
++ ![](imgs/30-legacy-ppac-security-manage-roles-button.jpg)
++ ![](imgs/31-manage-roles.jpg)
+
