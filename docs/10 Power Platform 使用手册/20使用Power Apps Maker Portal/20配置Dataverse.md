@@ -44,3 +44,55 @@
 + 如果Scope为Entity，则**所有main form**中都会触发此business rule，所有保存操作都**会在server端触发**，包括:canvas app中保存时，API创建的记录、导入的记录。
 + 在server端触发时，不支持这三个actions：Set Visibility; Lock/Unlock; Recommendation。Model-Driven中支持所有的action。
 + ![](imgs/46-business-rule-designer.jpg)
+
+
+## 配置views
++ 可以配置显示哪些列（列宽），配置排序方式，配置查询条件。
++ 不仅可以配置当前table中的列，还可以配置parent table中的列。比如在order列表中直接显示seller的地址。
++ 在Model-Driven app中可以切换view，如图:
++ ![](imgs/50-switch-views.jpg)
+
+## 配置forms
++ form用于显示一条记录的详细内容
++ form有4种类型：Main Form、Quick View Form、Quick Create Form（默认不可以创建）、Card Form
++ Quick Create Form默认不可以创建，需要在table的setting中开启，开启方式如下：
++ ![](imgs/53-4-form-types.jpg)  ![](imgs/53-enable-quick-create-form.jpg)
++ quick view form可以嵌入在main form中。比如这个需求：”在Contact的详情页直接查看所属公司“，操作方法：在`Contact`的Main Form中嵌入Account的Quick View Form。
++ Quick Create Form通过右上角的加号打开，效果如图:
++ ![](imgs/54-Quick-Create-Add-Icon.jpg)
++ Card Form比较少见，它是Dashboard页面的related list中的一个row。左侧有一个ColorStrip（只能放单选字段），有title和subtitle，Footer可以折叠展开。效果如图：
++ ![](imgs/55-Card.jpg)
++ ![](imgs/56-Card-Expanded.jpg)
++ 有两种designer，classic form designer功能更多；morden designer可以实时预览。
++ morden view designer：
++ ![](imgs/51main-form-designer.jpg)
++ classic form designer:
++ ![](imgs/52legacy-main-form-designer.jpg)
+
+## 配置dashboard
++ dashboard是仪表盘，就是 **分类**汇总 呈现出来，页面中有chart、list。
++ dashboard按创建方式分类，可分为以下三种：
++ 第一种：entity处配置的single-stream interactive dashboard
++ 第二种：app designer中配置的classic dashboard
++ 第三种：app designer中配置的interactive dashboard，可以是single-stream，也可以是multi-stream
++ app designer截图：
++ ![](imgs/57-dashboard-2-type.jpg)
++ ![](imgs/58-dashboard-2-type-web.jpg)
+
+### classic dashboard vs interactive dashboard
++ 
+
+### system dashboard vs user dashboard
++ dashboard按创建者分，可以分为system dashboard、user dashboard。见下图：
++ ![](imgs/59-create-user-dashboard.jpg) ![](imgs/60-user-dashboard.jpg)
+
+
+
+
+
+
+
+
+
+
+
