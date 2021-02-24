@@ -8,7 +8,8 @@
 + `Dynamic Worksheet`，dynamic的意思是每次下载时都要**让你勾选需要的列**，会将文件下载到本地，前三列是隐藏列
 + `Dynamic PivotTable`，dynamic的意思是每次下载时都要**让你勾选需要的列**，会下载一个excel文件，打开后**需要联网获取数据**。国内的网络环境会报错，最终显示一个空白文件
 
-## 三个隐藏列
+## 三个隐藏列的作用
 + 导出的excel前三列（ABC列）是隐藏列。保存的是guid、row checksum、modified_on
 + ![](imgs/03-three-hidden-columns.png)
-
++ 在导入的时候，如果前三列是空白，则表示这行是新建的
++ 如果修改了某个字段的值，上传后Dataverse可以检测到checksum不一致，会认为这行是修改
