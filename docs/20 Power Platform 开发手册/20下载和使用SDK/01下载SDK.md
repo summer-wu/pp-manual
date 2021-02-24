@@ -5,10 +5,15 @@
 + 开发工具托管在nuget上，开发工具的文档也在`https://docs.microsoft.com/en-us/powerapps/`
 + 直接下载一个SDK包，避免了到处找下载地址。
 
-## 下载2016年版SDK
+## 下载2016年版本SDK
 + 下载地址 [Microsoft Dynamics 365 (v8.x) Software Development Kit (SDK)](https://www.microsoft.com/en-us/download/details.aspx?id=50032)
 + 解压后可以看到这些内容:
 + ![](imgs/02-unzipped-SDK.jpg)
+
+## 2015年版本SDK下载地址
++ 下载地址在这里：
++ ![](imgs/40-2015-sdk.png)
++ 只下载2016年版本就行，这里的没必要下载
 
 ## SDK中比较重要的工具
 + EntityMetadata.xlsx 查看内置的metadata
