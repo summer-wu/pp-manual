@@ -2,9 +2,9 @@
 + Dataverse就是一个关系型数据库+Web管理界面。Dataverse和所有的关系型数据库一样，需要定义table、relationship（也叫外键或foreign key或reference key）、view。
 + Dataverse还提供了更丰富的功能，包括创建Chart、导入导出数据。
 
-## 标准表
+## 标准表(standard tables)
 + 新建环境后，是没有database的，这时只能创建canvas app。管理员可以安装database。
-+ database时，自带了一些表，比如Account、Contact、User，这些叫standard tables。标准表不可以删除只可以隐藏。
++ 安装database时，会自动创建一些表，比如Account、Contact、User，这些叫standard tables。标准表不可以删除只可以隐藏。
 + 隐藏标准表的方式：就是让所有人都看不到这个表，需要修改所有security roles，将Read权限改为None，但在 Maker Portal 仍然可以看到这个表。
 
 

@@ -13,7 +13,7 @@
 + 除了在Power Apps Maker Portal中可以查看apps，还可以在另外两个地方查看apps。
 + 在`O365`中查看：
 + ![](imgs/20-O365.jpg)
-+ 在`home.dynamics.com`中查看：
++ 在`home.dynamics.com`中查看（如果看不到需要的app，需要点击Sync）：
 + ![](imgs/30-home.dynamics.com.jpg)
 
 ## canvas app vs model-driven app
