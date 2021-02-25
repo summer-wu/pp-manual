@@ -15,10 +15,11 @@
 + `System Customizer`可以定制，可以修改自己拥有的记录
 + 当一个user被添加到environment后，会自动添加2个roles：`Dataverse User`、`Environment Maker`
 
-## 8种record-level privilege
-+ privilege有两种record-level的，和global-level的。如是否允许`Bulk Delete`，就是一个global-level privilege。
-+ dataverse支持8种record-level privileges。分别是：Create、Read、Write、Delete、Append、Append To、Assign(将owner改为其他人)、Share。
-+ 每一个record-level privilege都可以设置不同的access level。access level共5种：None Selected、Users、Business Unit、Parent:Child Business Units、Organization
+## 8种record-level privileges
++ privilege有两种：record-level的，和global-level的。如是否允许`Bulk Delete`，就是一个global-level privileges。本节只关注 `record-level privileges`
++ dataverse支持8种`record-level privileges`。分别是：Create、Read、Write、Delete、Append、Append To、Assign(将owner改为其他人)、Share。截图如下：
++ ![](../20使用Power%20Apps%20Maker%20Portal/imgs/42-access-levels-privileges.jpg)
++ 每一个`record-level privilege`都可以设置不同的`access level`。`access level`共5种：None Selected、Users、Business Unit、Parent:Child Business Units、Organization
 + Append vs Append To。`Append`权限是允许**创建**一条child，`Append To`是允许**关联**一条child。示例：buyer表种有一个买家，姓名为`张三`，`user1`**创建**一条order记录（buyer为`张三`），需要的是`Buyer表的Append`权限；`user1`**修改**一条已有order**的buyer为`张三`，需要的是`Buyer表的Append To`权限
 
 ## Create Privilege 的作用
