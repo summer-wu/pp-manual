@@ -3,7 +3,7 @@
 + 最新的文档位于`https://docs.microsoft.com/en-us/powerapps/`
 + 最新的示例代码在 [microsoft/PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) ，示例代码的文档也在`https://docs.microsoft.com/en-us/powerapps/`
 + 开发工具托管在nuget上，开发工具的文档也在`https://docs.microsoft.com/en-us/powerapps/`
-+ 直接下载一个SDK包，避免了到处找下载地址。
++ 直接下载一个SDK包，避免了到处找下载地址。而且SDK中提供的chm文档提供了很多开发相关的信息，可能比`docs.microsoft.com`上还全面。
 
 ## 下载2016年版本SDK
 + 下载地址 [Microsoft Dynamics 365 (v8.x) Software Development Kit (SDK)](https://www.microsoft.com/en-us/download/details.aspx?id=50032)
