@@ -91,8 +91,8 @@
 + Card Form比较少见，它是Dashboard页面的related list中的一个row。左侧有一个ColorStrip（只能放单选字段），有title和subtitle，Footer可以折叠展开。效果如图：
 + ![](imgs/55-Card.jpg)
 + ![](imgs/56-Card-Expanded.jpg)
-+ 有两种designer，classic form designer功能更多；morden designer可以实时预览。
-+ morden form designer：
++ 有两种designer，classic form designer功能更多；modern designer可以实时预览。
++ modern form designer：
 + ![](imgs/51main-form-designer.jpg)
 + classic form designer:
 + ![](imgs/52legacy-main-form-designer.jpg)
@@ -143,7 +143,7 @@
 
 ## 配置Alternate Key
 + Alternate Key实际是Alternate primary key，必须是Unique的。
-+ alternate key可能创建失败，`Morden PPac`中看不到创建状态，在`legacy PPac`中可以看到创建状态。
++ alternate key可能创建失败，`modern PPac`中看不到创建状态，在`legacy PPac`中可以看到创建状态。
 
 
 ## 在Maker Portal中管理Data
