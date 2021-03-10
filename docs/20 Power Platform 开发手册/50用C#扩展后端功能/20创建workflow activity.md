@@ -56,3 +56,13 @@ Entity contractedProductPostImage = context.PreEntityImages["PostBusinessEntity"
 
 ## 示例代码
 + 参考`https://github.com/demianrasko/Dynamics-365-Workflow-Tools`
+
+## 配置workflow 
++ 使用PluginRegistrationTool上传的是`workflow assembly`。上传后还需要到手动在designer中创建workflow
++ 新建workflow时，可以选择 Run in the background，或Run in real-time。注意plugin中的用语是asynchronous和synchronous，plugin和workflow是完全两套规则。
++ 新建workflow截图：
++ ![](imgs/10-new-workflow.jpg)
++ background workflow截图：
++ ![](imgs/11-background-workflow.jpg)
++ real-time workflow截图：
++ ![](imgs/12-realtime-workflow.jpg)
