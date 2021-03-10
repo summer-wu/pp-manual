@@ -21,7 +21,7 @@
 + Tools/PluginRegistration.exe plugin就是C#开发的dll，plugin只能通过这个工具上传到Dataverse
 + Tools/PackageDeployer.exe 用于上传sample data。solution中只包含customization，不包含数据。数据需要打包为package，用PackageDeployer上传
 + Tools/MetadataBrowser/MetadataBrowser_3_0_0_4_managed.zip 一个solution，用于查看metadata，避免了使用chrome plugin，功能比chrome extension少。(注意最新版是3.0.0.5，最新版可以单独下载)
-
++ 注意SDK中的版本都比较旧，可能无法登录成功（SDK中的PluginRegistration已经测试过了，无法登录成功）。最新版需要从nuget中下载。
 
 
 

@@ -1,4 +1,4 @@
-# 创建code component
+# 创建code component（js组件）
 + pcf：PowerApps Component Framework
 + 本文仅为技术要点总结，需要参考官方文档一起阅读
 + Power Apps支持用代码构建前端组件，然后可以插入到 model-driven app 中或 canvas app 中。在 canvas app 中使用code component需要手动开启，默认是**不支持**在canvas app 中使用code component的。
