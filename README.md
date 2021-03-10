@@ -3,7 +3,7 @@
 
 # 如何修改手册内容？
 + 要修改手册内容，直接修改对应的markdown文件即可
-+ 如果需要预览,或构建 static html，需要安装mkdocs
++ 如果需要预览,或构建 static html，执行`mkdocs serve`
 
 # 安装mkdocs及依赖
 + 要求python3.8
