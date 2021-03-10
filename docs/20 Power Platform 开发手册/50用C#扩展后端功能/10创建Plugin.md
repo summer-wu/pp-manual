@@ -68,6 +68,9 @@ public SamplePlugin(string unsecure, string secure) //这两个参数，是在Re
 + 必须对plugin assembly进行签名。可以用VS中的Signing，或sn.exe（Strong Name tool）
 + ![](imgs/00-signing.png)
 
+## 示例代码
++ 见`https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/FollowupPlugin`
+
 
 ## 配置plugin
 + 如何使用PluginRegistrationTool见单独的章节。
