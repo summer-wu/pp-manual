@@ -74,4 +74,4 @@ public SamplePlugin(string unsecure, string secure) //这两个参数，是在Re
 
 ## 配置plugin
 + 如何使用PluginRegistrationTool见单独的章节。
-+ 所有的plugin配置都是通过 PluginRegistrationTool
++ plugin的所有配置都是通过 PluginRegistrationTool，可以register、unregister、update、disable、enable
