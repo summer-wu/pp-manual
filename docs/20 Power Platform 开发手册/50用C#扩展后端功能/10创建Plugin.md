@@ -1,4 +1,4 @@
-# 10创建Plugin
+# 创建Plugin
 + 需要创建一个Visual Studio Project，plugin需要实现`Microsoft.Xrm.Sdk.IPlugin`接口
 + IPlugin中仅有一个Execute方法，从`IServiceProvider`中可以获取到 `plug-in execution context (IPluginExecutionContext), tracing service (ITracingService), organization service (IOrganizationServiceFactory), and notification service (IServiceEndpointNotificationService)`
 ```
