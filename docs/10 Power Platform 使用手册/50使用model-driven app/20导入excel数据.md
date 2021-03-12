@@ -40,5 +40,5 @@
 ### 获取GUID
 + 获取GUID有两种方式：
 + 方式一：从url中找，适合手动查找，如John Doe(Male)详情页url是 `https://dms-dev-v1.crm5.dynamics.com/main.aspx?appid=ab14c230-dc80-eb11-a812-000d3ac8b644&recordSetQueryKey=cr443_pet_owner-c049aa05-704e-4720-821f-e3297bc83361%253A%2520%253A%2520%253A%2520%253A%2520%253A%2520%253A%2520false%253A%2520%253A%2520%253A%252050&pagetype=entityrecord&etn=cr443_pet_owner&id=cbc7ed91-1282-eb11-b1ac-000d3aa39347`，可以找到id是`cbc7ed91-1282-eb11-b1ac-000d3aa39347` 
-+ 方式二：通过alternate key和WebAPI获取，适合用程序抓取。需要先定义alternate key，然后访问这个地址`https://dms-dev-v1.crm5.dynamics.com/api/data/v9.2/cr443_pet_owners(cr443_external_id='johndoe1female')` 。找到的id是`405d3151-dc80-eb11-a812-000d3ac8b644`
++ 方式二：通过alternate key和WebAPI获取，适合用程序抓取。需要先定义alternate key（定义alernate key时需要选择columns，此处只选择`external_id`），然后访问这个地址`https://dms-dev-v1.crm5.dynamics.com/api/data/v9.2/cr443_pet_owners(cr443_external_id='johndoe1female')` 。找到的id是`405d3151-dc80-eb11-a812-000d3ac8b644`
 + ![](imgs/24-postman-webapi.jpg)

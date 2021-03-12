@@ -144,7 +144,8 @@
 ## 配置Alternate Key
 + Alternate Key实际是Alternate primary key，必须是Unique的。
 + alternate key可能创建失败，`modern PPac`中看不到创建状态，在`legacy PPac`中可以看到创建状态。
-
++ 创建alternate key需要选择≥1个columns。截图如下：
++ ![](imgs/72-alternate-key.jpg)
 
 ## 在Maker Portal中管理Data
 + 在Data标签处，显示的不是所有数据! **在右上角可以修改View**
