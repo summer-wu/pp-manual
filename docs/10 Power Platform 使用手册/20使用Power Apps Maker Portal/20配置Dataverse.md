@@ -37,10 +37,13 @@
 + ![](imgs/45-Appointment.png)
 
 ### calculated field 与 rollup field
-+ `rollup field` 会写入db，需要system job定时执行，第一次配置后需要等待一段时间（12小时执行一次）。可以跨多个entity，比如可以记录一个公司有多少个员工。可以使用aggregate function（如COUNT SUM）
-+ `rollup field` 的 字段类型 只能是 number。不可以是 文本、单选 类型。
++ `rollup field` 会写入db，需要system job定时执行，第一次配置后需要等待一段时间（12小时执行一次）。一般用于统计child records（也叫related records）的数据。比如统计一个公司有多少个员工，用count。比如一个订单有多个订单项，要统计订单的总金额，可以用sum。
++ `rollup field` 的 数据类型 只能是 文本、number。不可以是Lookup、单选、多选、图片。
++ `rollup field`的system job是计算表中所有的`rollup field`，耗时可能需要几分钟。但如果仅计算**一个**rollup field，是可以手动触发的，如下图：
++ ![](imgs/76-manual-recalculate.png)
++ ===
 + `calculated field` 不写入到db，它是**读取数据时用sql语句计算出来**的。
-+ `calculated field`只能是 文本、number 类型。不可以是Lookup、单选、多选、图片。
++ `calculated field`的 数据类型 只能是 文本、number。不可以是Lookup、单选、多选、图片。
 + 字段的Data Type和Field Type创建后是不可以修改，如果错了只能删掉:
 + ![](imgs/71-field-type-cannot-change.png)
 
