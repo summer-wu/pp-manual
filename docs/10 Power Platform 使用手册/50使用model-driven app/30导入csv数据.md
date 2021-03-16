@@ -6,6 +6,8 @@
 > BOM是byte order mark的缩写。
 + 乱码的效果截图：
 + ![](imgs/31-messy-code.jpg)
++ 如果出现乱码了，可以将本次导入的记录都删掉，见下图：
++ ![](imgs/40-delete-imported-records.jpg)
 
 ## 查看和修改文件encoding
 + 用`Notepad++`可以查看文件编码，见下图
