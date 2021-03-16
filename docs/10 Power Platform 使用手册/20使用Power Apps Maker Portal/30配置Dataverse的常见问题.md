@@ -9,6 +9,3 @@
 + ![](imgs/75-resolve-dependency-to-delete.jpg)
 + 移除依赖后：
 + ![](imgs/76-after-resolve-dependent.jpg)
-
-
-
