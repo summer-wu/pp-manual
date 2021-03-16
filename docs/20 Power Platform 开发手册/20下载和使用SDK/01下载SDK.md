@@ -18,7 +18,7 @@
 ## SDK中比较重要的工具
 + EntityMetadata.xlsx 查看内置的metadata
 + Bin/SolutionPackager.exe 用于将解压和打包solution
-+ Tools/PluginRegistration.exe plugin就是C#开发的dll，plugin只能通过这个工具上传到Dataverse
++ Tools/PluginRegistration.exe plugin是C#开发的dll，plugin只能通过这个工具上传到Dataverse。SDK中的版本已经旧了，最新版需要到nuget中下载
 + Tools/PackageDeployer.exe 用于上传sample data。solution中只包含customization，不包含数据。数据需要打包为package，用PackageDeployer上传
 + Tools/MetadataBrowser/MetadataBrowser_3_0_0_4_managed.zip 一个solution，用于查看metadata，避免了使用chrome plugin，功能比chrome extension少。(注意最新版是3.0.0.5，最新版可以单独下载)
 + 注意SDK中的版本都比较旧，可能无法登录成功（SDK中的PluginRegistration已经测试过了，无法登录成功）。最新版需要从nuget中下载。
