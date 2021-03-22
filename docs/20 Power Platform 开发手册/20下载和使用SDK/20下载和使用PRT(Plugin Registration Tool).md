@@ -1,5 +1,5 @@
-# 下载和使用PRT PRT(Plugin Registration Tool)
-+ PRT可以从nuget下载:
+# 下载和使用PRT(Plugin Registration Tool)
++ 最新版本的PRT(Plugin Registration Tool)只能从nuget下载:
 + ![](imgs/22-PRT-nuget.png)
 + ![](imgs/22-download-PRT.jpg)
 + 下载后将`filename.version.nupkg`，改名为`filename.version.zip`，然后解压，解压后可以看到一个exe文件。
